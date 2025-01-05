@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "dev.jhonhab.fitnessapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "dev.jhonhab.fitnessapp"
@@ -56,4 +56,6 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    val nav_version = "2.8.5"
+    implementation("androidx.navigation:navigation-compose:$nav_version")
 }
