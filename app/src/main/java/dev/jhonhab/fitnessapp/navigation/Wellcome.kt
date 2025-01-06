@@ -23,11 +23,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import dev.jhonhab.fitnessapp.R
+import dev.jhonhab.fitnessapp.utils.Routes
 
-@Preview
+
 @Composable
-fun WellcomeScreen() {
+fun WellcomeScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -57,7 +59,9 @@ fun WellcomeScreen() {
 
         // Botón en la parte inferior
         Button(
-            onClick = {},
+            onClick = {
+                navController.navigate(Routes.onboarding1)
+            },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(60.dp)
