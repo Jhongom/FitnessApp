@@ -15,6 +15,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import dev.jhonhab.fitnessapp.navigation.Onboarding1
+import dev.jhonhab.fitnessapp.navigation.Onboarding2
 import dev.jhonhab.fitnessapp.navigation.WellcomeScreen
 import dev.jhonhab.fitnessapp.ui.theme.FitnessappTheme
 import dev.jhonhab.fitnessapp.utils.Routes
@@ -32,7 +33,10 @@ class MainActivity : ComponentActivity() {
                         WellcomeScreen(navController)
                     }
                     composable(Routes.onboarding1) {
-                        Onboarding1()
+                        Onboarding1(navController)
+                    }
+                    composable(Routes.onboarding2) {
+                        Onboarding2()
                     }
                 })
             }
